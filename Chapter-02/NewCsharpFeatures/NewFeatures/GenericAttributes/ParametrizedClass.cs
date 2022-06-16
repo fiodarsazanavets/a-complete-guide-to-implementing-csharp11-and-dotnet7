@@ -2,10 +2,10 @@ namespace NewFeatures.GenericAttributes;
 
 public class ParametrizedClass
 {
-    [OldTypeAttribute(typeof(int))]
+    [OldType(typeof(int))]
     public int DoOldStyleJob() => default;
 
-    [NewTypeAttribute<int>]
+    [NewType<int>]
     public int DoNewStyleJob() => default;
 
 }
