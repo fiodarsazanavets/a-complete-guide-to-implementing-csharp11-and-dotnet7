@@ -1,9 +1,21 @@
 ﻿using CoreLibraryImprovements;
 
-Console.WriteLine("Demonstrating improvements to time-related data types.");
+Console.WriteLine("Demonstrating time-related data type improvements.");
 TimeDatatypeImprovements.DemoNewTimeFeatures();
 
-Console.WriteLine("Demonstrating improvements to JSON.");
+Console.WriteLine("Demonstrating JSON improvements.");
 NewJsonFeatures.DemoJsonWriterOptions();
 NewJsonFeatures.ShowDefaultJsonSerializerOptions();
 NewJsonFeatures.DemoJsonPolymorphism();
+
+Console.WriteLine("Demonstrating Stream improvements.");
+NewStreamFeatures.DemoReadExactly();
+NewStreamFeatures.DemoReadAtLeast();
+
+Console.WriteLine("Demonstrating RegEx improvements.");
+
+var lettersOnlyText = "letters";
+var mixedText = "fwef340";
+
+NewRegexFeatures.DemoSpanFeatures(lettersOnlyText);
+NewRegexFeatures.DemoSpanFeatures(mixedText);

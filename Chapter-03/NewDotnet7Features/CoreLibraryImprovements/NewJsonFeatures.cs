@@ -1,10 +1,11 @@
+using System.Buffers;
 using System.Net.Http.Json;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
 namespace CoreLibraryImprovements;
 
-public class NewJsonFeatures
+public static class NewJsonFeatures
 {
     public static void DemoJsonWriterOptions()
     {
