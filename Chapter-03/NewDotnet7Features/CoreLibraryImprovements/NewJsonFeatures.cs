@@ -15,8 +15,8 @@ public static class NewJsonFeatures
             MaxDepth = 5
         };
 
-        using FileStream fs = File.Create("output.json");
-        using var writer = new Utf8JsonWriter(fs, options: options);
+        using var fileStream = File.Create("output.json");
+        using var writer = new Utf8JsonWriter(fileStream, options: options);
         using JsonDocument document = JsonDocument.Parse("""
         {
             "level1": {
@@ -29,7 +29,7 @@ public static class NewJsonFeatures
         }
         """);
 
-        JsonElement root = document.RootElement;
+        var root = document.RootElement;
 
         if (root.ValueKind == JsonValueKind.Object)
         {
