@@ -19,3 +19,6 @@ var mixedText = "fwef340";
 
 NewRegexFeatures.DemoSpanFeatures(lettersOnlyText);
 NewRegexFeatures.DemoSpanFeatures(mixedText);
+
+Console.WriteLine("Demonstrating cryptography improvements.");
+CryptographyEnhancements.DemoCertificateNameBuilder();
