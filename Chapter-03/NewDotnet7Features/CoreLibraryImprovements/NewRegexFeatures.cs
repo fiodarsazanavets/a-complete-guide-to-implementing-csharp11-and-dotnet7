@@ -7,7 +7,7 @@ public partial class NewRegexFeatures
     [RegexGenerator(@"^[a-z]+$", RegexOptions.IgnoreCase)]
     public static partial Regex LettersRegex(); 
 
-    public static void DemoSpanFeatures(string input)
+    public static void DemoPrecompiledRegex(string input)
     {
         Console.WriteLine($"'{input}' matches '^[a-z]+$' RegEx: {LettersRegex().IsMatch(input)}.");
         Console.WriteLine($"The number of matches: {LettersRegex().Count(input)}.");

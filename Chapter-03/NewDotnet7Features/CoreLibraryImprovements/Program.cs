@@ -17,8 +17,8 @@ Console.WriteLine("Demonstrating RegEx improvements.");
 var lettersOnlyText = "letters";
 var mixedText = "fwef340";
 
-NewRegexFeatures.DemoSpanFeatures(lettersOnlyText);
-NewRegexFeatures.DemoSpanFeatures(mixedText);
+NewRegexFeatures.DemoPrecompiledRegex(lettersOnlyText);
+NewRegexFeatures.DemoPrecompiledRegex(mixedText);
 
 Console.WriteLine("Demonstrating cryptography improvements.");
 CryptographyEnhancements.DemoCertificateNameBuilder();
