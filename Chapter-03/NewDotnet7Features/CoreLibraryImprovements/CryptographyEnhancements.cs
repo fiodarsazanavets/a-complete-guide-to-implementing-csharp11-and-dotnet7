@@ -14,5 +14,4 @@ public static class CryptographyEnhancements
         Console.WriteLine($"The certificate name is: {
             builder.Build().Decode(X500DistinguishedNameFlags.None)}");
     }
-
 }
