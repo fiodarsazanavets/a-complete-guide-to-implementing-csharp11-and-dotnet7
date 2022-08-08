@@ -31,7 +31,6 @@
             <Entry
                 x:Name="IncrementInput"
                 Placeholder="1"
-                Width="300"
                 HorizontalOptions="Center" />
 
             <Button 

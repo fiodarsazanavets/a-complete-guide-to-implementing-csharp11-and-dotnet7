@@ -36,7 +36,6 @@
             <Entry
                 x:Name="IncrementInput"
                 Text="{Binding IncrementBy}"
-                Width="300"
                 HorizontalOptions="Center" />
 
             <Button
