@@ -17,4 +17,7 @@ public record Employee
 
     public Job Job { get; set; }
     public ICollection<Shift> Shifts { get; set; }
+
+    [NotMapped]
+    public string FullName => FirstName + " " + LastName;
 }
