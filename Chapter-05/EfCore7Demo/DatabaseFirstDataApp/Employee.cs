@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace DatabaseFirstDataApp
+﻿namespace DatabaseFirstDataApp
 {
     public partial class Employee
     {
@@ -10,7 +7,7 @@ namespace DatabaseFirstDataApp
             Shifts = new HashSet<Shift>();
         }
 
-        public int EmployeeId { get; set; }
+        public EmployeeKey EmployeeId { get; set; }
         public string FirstName { get; set; } = null!;
         public string LastName { get; set; } = null!;
         public DateTime DateOfBirth { get; set; }
@@ -19,5 +16,12 @@ namespace DatabaseFirstDataApp
 
         public virtual Job Job { get; set; } = null!;
         public virtual ICollection<Shift> Shifts { get; set; }
+    }
+
+    public class EmployeeKey
+    {
+        public EmployeeKey(Func<int> generator) => EmployeeId = generator();
+        public EmployeeKey(int id) => EmployeeId = id;
+        public int EmployeeId { get; private set; }
     }
 }

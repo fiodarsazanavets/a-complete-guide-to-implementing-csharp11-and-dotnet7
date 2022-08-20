@@ -36,15 +36,7 @@ public class DbInitializer
         {
             new Employee
             {
-
-                FirstName="John",
-                LastName="Smith",
-                DateOfBirth=DateTime.Parse("1992-10-01"),
-                StartDate=DateTime.Parse("2020-09-01"),
-                JobId = 1,
-            },
-            new Employee
-            {
+                Id = 2,
                 FirstName="Alexander",
                 LastName="Marshall",
                 DateOfBirth=DateTime.Parse("1982-09-12"),
@@ -53,6 +45,7 @@ public class DbInitializer
             },
             new Employee
             {
+                Id = 3,
                 FirstName="Michael",
                 LastName="Davidson",
                 DateOfBirth=DateTime.Parse("1989-05-11"),
@@ -63,6 +56,24 @@ public class DbInitializer
         foreach (var e in employees)
         {
             context.Employees.Add(e);
+        }
+        context.SaveChanges();
+
+        var supervisors = new Supervisor[]
+        {
+            new Supervisor
+            {
+                Id = 1,
+                FirstName="John",
+                LastName="Smith",
+                DateOfBirth=DateTime.Parse("1992-10-01"),
+                StartDate=DateTime.Parse("2020-09-01"),
+                JobId = 1,
+            },
+        };
+        foreach (var s in supervisors)
+        {
+            context.Employees.Add(s);
         }
         context.SaveChanges();
 
