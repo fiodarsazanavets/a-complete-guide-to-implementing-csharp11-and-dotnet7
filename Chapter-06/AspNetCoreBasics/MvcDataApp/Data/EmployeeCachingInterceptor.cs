@@ -15,10 +15,10 @@ public class EmployeeCachingInterceptor : IMaterializationInterceptor
         if (materializationData.EntityType.ClrType == typeof(Employee))
         {
             var employeeName = materializationData.GetPropertyValue<string>(nameof(Employee.FullName));
-            if (EmployeeCache.TryGetValue(employeeName, out var country))
+            if (EmployeeCache.TryGetValue(employeeName, out var employee))
             {
-                Console.WriteLine($"Got employee '{country.FullName}' from the cache.");
-                return InterceptionResult<object>.SuppressWithResult(country);
+                Console.WriteLine($"Got employee '{employee.FullName}' from the cache.");
+                return InterceptionResult<object>.SuppressWithResult(employee);
             }
         }
 

@@ -16,9 +16,6 @@ public class FactoryManagerContext : DbContext
     public DbSet<Job> Jobs { get; set; }
     public DbSet<Shift> Shifts { get; set; }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.AddInterceptors(new EmployeeCachingInterceptor());
-
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Person>().UseTpcMappingStrategy();
