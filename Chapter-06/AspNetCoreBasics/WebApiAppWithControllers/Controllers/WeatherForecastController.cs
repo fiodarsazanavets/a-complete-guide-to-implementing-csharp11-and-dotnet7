@@ -21,7 +21,7 @@ public class WeatherForecastController : ControllerBase
     [HttpGet(Name = "GetWeatherForecast")]
     public IActionResult Get()
     {
-        _logger.LogInformation("Obtaining 5-day weather forcast.");
+        _logger.LogInformation("Obtaining 5-day weather forecast.");
 
         try
         {
@@ -38,7 +38,7 @@ public class WeatherForecastController : ControllerBase
     [HttpGet("injected-service")]
     public IActionResult GetFromService(IWeatherForecastService weatherForecastService)
     {
-        _logger.LogInformation("Obtaining 5-day weather forcast.");
+        _logger.LogInformation("Obtaining 5-day weather forecast.");
 
         try
         {
